@@ -1,5 +1,5 @@
 {
-    "name": "AnalyzerInPackageWithAsmdef",
+    "name": "AnalyzerInPackageAsm",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [],

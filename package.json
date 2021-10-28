@@ -1,4 +1,15 @@
 {
   "name": "com.nowsprinting.analyzer-in-package",
-  "version": "1.1.0"
+  "displayName": "Analyzer in Package",
+  "version": "1.1.0",
+  "unity": "2019.4",
+  "description": "TBD",
+  "license": "MIT",
+  "author": "nowsprinting (https://github.com/nowsprinting)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nowsprinting/analyzer-in-package.git"
+  },
+  "dependencies": {
+  }
 }
