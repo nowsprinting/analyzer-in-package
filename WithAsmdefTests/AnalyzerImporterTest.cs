@@ -38,9 +38,8 @@ namespace AnalyzerImporter
         public void MyAnalyzers_gotAnalyzerNodes()
         {
             var actual = AnalyzerImporter.MyAnalyzers.ToArray();
-            Assert.That(actual.Length, Is.EqualTo(2));
+            Assert.That(actual.Length, Is.EqualTo(1));
             Assert.That(actual[0].ToString(), Is.EqualTo(AnalyzerElementString("AnalyzerInPackageWithAsmdef.dll")));
-            Assert.That(actual[1].ToString(), Is.EqualTo(AnalyzerElementString("HogeFugaAnalyzer.dll")));
         }
 
         [Test]
@@ -51,7 +50,6 @@ namespace AnalyzerImporter
                 Is.EqualTo(new[]
                 {
                     $"Packages/com.nowsprinting.analyzer-in-package/WithAsmdef/AnalyzerInPackageWithAsmdef.dll",
-                    $"Packages/com.nowsprinting.analyzer-in-package/WithAsmdef/HogeFugaAnalyzer.dll"
                 }));
         }
 
