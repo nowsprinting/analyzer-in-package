@@ -48,7 +48,6 @@
     <Analyzer Include="Packages/com.nowsprinting.analyzer-in-package/AnalyzerInPackage.dll" />
     <Analyzer Include="Packages/com.nowsprinting.analyzer-in-localpackage/AnalyzerInLocalPackage.dll" />
     <Analyzer Include="Packages/com.nowsprinting.analyzer-in-localpackage/WithAsmdef/AnalyzerInLocalPackageWithAsmdef.dll" />
-    
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\SpecifiedReferences\SpecifiedReferences.cs" />
