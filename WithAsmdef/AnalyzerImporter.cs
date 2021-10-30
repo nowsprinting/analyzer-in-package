@@ -12,12 +12,18 @@ using UnityEditor;
 namespace AnalyzerImporter
 {
     /// <summary>
-    /// TODO: あなたのライブラリのasmdef下に、アナライザDLLとこのファイルを置いてください
-    /// TODO: 英語で
+    /// This script applies the Roslyn analyzers under the assembly definition file (.asmdef) to each project .csproj file.
+    /// Analyzer maintains the dependencies described in the <see href="https://docs.unity3d.com/2020.2/Documentation/Manual/roslyn-analyzers.html">Analyzer scope</see> of Unity 2020.2 or later.
+    /// You can distribute the analyzer for your library along with the UPM package.
     ///
-    /// 1. asmdef依存関係を考慮していないアナライザを除去します
-    /// 2. このasmを依存関係に含むcsprojに、このasm下のアナライザを適用します
-    /// 
+    /// Usage:
+    /// 1. Place the analyzer DLL files in the directory same or under the .asmdef file
+    /// 2. Place this script in the directory same or under the .asmdef file
+    /// 3. Check if the assembly definition file (.asmdef) name is the same as the assembly name
+    ///
+    /// How it works:
+    /// 1. Remove `Analyzer` node added by IDE that does not consider dependencies or package cache paths
+    /// 2. Apply the analyzer under this asmdef to the .csproj file that contains this assembly as a dependency
     /// </summary>
     /// <remarks>
     /// Required same as the assembly definition file (.asmdef) name and assembly name.
