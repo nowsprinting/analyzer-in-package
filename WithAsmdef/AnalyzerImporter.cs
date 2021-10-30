@@ -35,7 +35,7 @@ namespace AnalyzerImporter
         public static string MyAssemblyName => typeof(AnalyzerImporter).Assembly.GetName().Name;
 
         public static string MyAssemblyRoot => AssetDatabase
-            .FindAssets(MyAssemblyName, new string[] { "Packages" })
+            .FindAssets(MyAssemblyName, new string[] { })
             .Select(AssetDatabase.GUIDToAssetPath)
             .First()
             .Replace($"/{MyAssemblyName}.asmdef", "");
