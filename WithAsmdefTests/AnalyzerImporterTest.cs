@@ -68,9 +68,10 @@ namespace AnalyzerImporter
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-        [TestCase("SpecifiedReferences_csproj.txt", true)]
         [TestCase("NoReferences_csproj.txt", false)]
-        public void ExistMyProjectReferenceInCsproj_correct(string file, bool expected)
+        [TestCase("SpecifiedReferences_csproj.txt", true)]
+        [TestCase("SpecifiedReferences_csproj_upm.txt", true)]
+        public void ExistProjectReferenceInCsproj_correct(string file, bool expected)
         {
             var content = AssetDatabase
                 .LoadAssetAtPath<TextAsset>($"Packages/com.nowsprinting.analyzer-in-package/WithAsmdefTests/{file}")

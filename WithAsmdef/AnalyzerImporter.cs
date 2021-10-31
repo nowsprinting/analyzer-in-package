@@ -65,7 +65,8 @@ namespace AnalyzerImporter
         {
             return
                 content.Contains($"<AssemblyName>{MyAssemblyName}</AssemblyName>") ||
-                content.Contains($"<ProjectReference Include=\"{MyAssemblyName}.csproj\">");
+                content.Contains($"<ProjectReference Include=\"{MyAssemblyName}.csproj\">") ||
+                content.Contains($"<Reference Include=\"{MyAssemblyName}\">");
         }
 
         private static string OnGeneratedCSProject(string path, string content)
